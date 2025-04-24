@@ -9,30 +9,34 @@ public class Ex15 {
 
 		System.out.println("출력되는 내용을 입력하세요.");
 		System.out.print("기호: ");
-        String sign = sc.next();
+		String sym = sc.next();
 		System.out.print("숫자1: ");
-		int num1 = sc.nextInt();
+		double num1 = sc.nextDouble();
 		System.out.print("숫자2: ");
-		int num2 = sc.nextInt();
-		int result = 0;
-				
-		switch(sign) {
-			case "+" : result = num1 + num2;
-			break;
-			case "-" : result = num1 - num2;
-			break;
-			case "*" : result = num1 * num2;
-			break;
-			case "/": result = num1 / num2;
-			default : 
-				System.out.println("계산할 수 없는 기호입니다.");
-			if (num2 == 0) {
-		        	System.out.println("계산할 수 없습니다.");
-			}
+		double num2 = sc.nextDouble();
 			
+		switch(sym) {
+			case "+" :
+				System.out.println(num1 + num2);		
+			break;
+			case "-" :
+				System.out.println(num1 - num2);		
+			break;
+			case "*" :
+				System.out.println(num1 * num2);		
+			break;
+			case "/" :
+				if(num2 == 0) {
+					System.out.println("계산할 수 없습니다.");
+				
+				}else {
+					System.out.println(num1 / num2);
+				}
+			break;
+			default :
+				System.out.println("계산할 수 없는 기호입니다..");
+			break;
 		}
-        System.out.print("결과는: " + result);
-		
 		sc.close();
 
 	}
