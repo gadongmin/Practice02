@@ -9,28 +9,30 @@ public class Ex23_1 {
 		System.out.println("태어난 년도를 입력해주세요.");
 		System.out.print("년도: ");
 		int year = sc.nextInt();
-		System.out.print("올해: ");
-		int tyear = 2023;
-		System.out.print("태어난해: ");
-		int byear = year;
-		System.out.print("나이: ");
-		int age = tyear-byear;
+		System.out.print("올해: 2023");
+		System.out.println("");
+		System.out.print("태어난해: " + year);
+		System.out.println("");
+		int age = 2023 - year;
+		System.out.print("나이: " + age);
+		System.out.println("");
 		
-		if(tyear % 2 == 0) {
-			if(byear % 2 == 0) {
-				System.out.println("건강검진해");
+		System.out.println("==========================");		
+		if(age >= 20) {
+			System.out.println("20살 이상");
+			if(year % 2 == 1) {
+				System.out.println("건강검진해");	
 			}else {
-				System.out.println("");
+				System.out.println("건강검진 대상이 아님");
 			}
-			
-			if(age>=20) {
-				if(age>=40) {
-					System.out.println("20살이상");
-					System.out.println("암 검사");
-				}else {
-					System.out.println("20살 미만 건강검진 대상이 아님");
-				}
-			}
+		}else {
+			System.out.println("20살 미만");
+		}
+		
+		if(age >= 40) {
+			System.out.println("암검사");
+		}else {
+			System.out.println("암검사X");
 		}
 		
 		sc.close();
